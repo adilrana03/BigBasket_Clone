@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="add.css" />
+    <link rel="icon" href="https://www.bbassets.com/static/v2514/images/favicon.ico?v=2514" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14f3db4c8e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <br/>
+    <div id="navbar">
+        
+        <img
+            src="https://www.bigbasket.com/static/v2489/common/img/bb_logo.png"
+            alt=""
+          />
+        <h2>1860 123 1000</h2>
+    </div>
+    <br/>
+    <hr/>
+    <!--Delevery Address-->
+    <div id = "main">
+        <div id="delivery">
+            <h3><i class="fa-solid fa-location-dot"></i> Delivery Address</h3>
+            <spam>Personal Details</spam>
+            <div id="details">
+                <div id="f-name">
+                    <label for="">Enter first name</label><br/>
+                    <input type="text" name="" id="first_name" required/>
+                </div>
+                <div id="l-name">
+                    <label for="">Enter last name</label><br />
+                    <input type="text" name="" id="last_name"  required/>
+                </div>
+                <div id="c-number">
+                    <label for="">Enter contact number</label><br/>
+                    <input type="text" name="" id="contact_number" required />
+                </div>
+            </div>
+
+            <spam>Address Details</spam>
+            <div id="address">
+                <div id="house">
+                    <label for="">House No</label><br/>
+                    <input type="text" name="" id="House_no" required/>
+                </div>
+                <div id="apartment">
+                    <label for="">Enter apartment name</label><br>
+                    <input type="text" name="" id="apartment" />
+                </div>
+            </div>
+            <div id="street">
+                <div id="str-det">
+                    <label for="">Enter street details</label><br/>
+                    <input type="text" name="" id="street" required/>
+                </div>
+                <div id="landmark">
+                    <label for="">Enter landmark for easy reach out</label><br/>
+                    <input type="text" name="" id="landmark" />
+                </div>
+            </div>
+            <div id="city">
+                <div id="city-name">
+                    <label for="">Enter city name</label><br/>
+                    <input type="text" name="" id="city" required/>
+                </div>
+                <div id="area">
+                    <label for="">Area Details</label><br/>
+                    <input type="text" name="" id="area"  required />
+                </div>
+                <div id="pincode">
+                    <label for="">Pin Code</label><br/>
+                    <input type="number" name="" id="pincode" reuquired/>
+                </div>                
+            </div>
+            <div id="nickname">
+                <label for="">Choose a nick name for this address</label><br/>
+                <button type="" id="home" onclick="home()">HOME</button>
+                <button type="" id="office" onclick="office()">OFFICE</button>
+            </div>
+            <br/>
+            <div id="checkbox">
+                <input type="checkbox">
+                <spam>
+                    Set this as my default delivery address</spam>
+                </spam>
+            </div>
+            <br/>
+            <div id="submit_add">
+                <button id="sub" type="submit" ><a href="#main_box">ADD ADDRESS</a></button>
+                <button  type ="submit"><a href="../Home_page/index.html"> CANCEL </a></button>
+            </div>
+        </div>
+
+        <!--Apply voucher-->
+        <div id="voucher">
+            <spam>Apply Voucher</spam>
+            <div id="vou-num">
+                <input type="text" placeholder="Enter voucher code"  id="vou1"/>
+                <button id="vouButton">  Apply </a></button>
+            </div>
+            <spam>Order Summary</spam>
+            <div id="summary">
+                <div id="summ-child">
+                    
+                    <div id="bas-value">
+                        <p>Basket Value</p>
+                        <hs id="basket">0</hs>
+                    </div> 
+                    <div id="deli-charge">
+                        <p>Delivery Charge</p>
+                        <p>FREE</p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <h3>Total Amount Payable</h3>
+                        <h3 id="total"></h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--gift-->
+    <div id="gift">
+        <h3><i class="fa-solid fa-gift"></i> Is this a gift order?</h3>
+        <spam>Details For Gift Message</spam>
+        <div id="gift_details">
+            <div id="gift_name">
+                <div id="rec-name">
+                    <label for="">Enter recipient's page</label><br/>
+                    <input type="text" name="" id="fir_name" />
+                </div>
+                <div id="your-name">
+                    <label for="">Enter your name</label><br/>                    <input type="text" name="" id="last_name" />
+                </div>
+            </div>
+            <div id="message">
+                <label for="">Enter message</label><br/>
+                <input type="textarea" name="" id="contact_number" /><br/>
+            </div>
+            <br/>
+            <div id="submit_msg">
+                <button type="submit">SAVE AND CONTINUE</button>
+                <button type ="submit">CANCEL</button>
+            </div>
+        </div>
+        </div>
+
+        <!--Payment-->
+        
+        <!-- <h2><i class="fa-solid fa-cash-register"></i> Delivery Options</h2> -->
+        <div id="main_box">
+            <div id="left" >
+              <div id="card" onclick="handleCredit()">Debit/Credit Card</div>
+              <!-- <div>Net Banking</div> -->
+              <div id="upi" onclick="handleUpi()">Upi</div>
+              <!-- <div>Wallet</div> -->
+              <div id="cash" onclick="handleCod()">Cash/Card on delivery</div>
+            </div>
+            <div id="right">
+                <div id="credit">
+                    <h4>Pay Using Card</h4>
+                    <div id="add_credit">
+                        <input type="radio" id="radio" >
+                        <p>Add Credit/Debit Card </p>
+                    </div>
+                    <div id="payment_details">
+               
+                  <!-- <p>Add Credit/Debit Card </p> -->
+                    <div id="card_details">
+                       <div class="first_line">
+                          <label for="card_no">Card  Number</label>
+                          <input type="text" id="card_no" placeholder="Enter Card Number">
+                        </div>
+                        <div id="sec_line">
+                          <div class="first_line">
+                              <label for="valid">Valid Through</label>
+                              <input type="text" id="valid" placeholder="MM / YY">
+                            </div >
+                          <div class="first_line">
+                              <label for="cvv">CVV</label>
+                              <input type="text" id="cvv" placeholder="Security Code">
+                          </div>
+                        </div>
+                        <div id="save">
+                          <input id="checkbox" type="checkbox">
+                          <p>save this card for faster payment</p>
+                        </div>
+                    </div>
+                    <button id="pay">Place Order & Pay</button>
+                </div>
+            </div> 
+            <div id="add_upi">
+                <h4>Pay Using UPI</h4>
+                <div id="childUpi">
+                    <div id="up1">
+                        <input type="radio" >
+                        <p>Add new UPI ID</p>
+                    </div>
+                    <div id="up12">
+                        <label for="cvv">UPI ID</label><br/>
+                        <input type="text" id="upiid" placeholder="user@bankname">
+                        <p>A payment request will be sent to this UPI ID</p>
+                    </div>
+                    <button id="verify">Verify</button>
+                </div>
+                </div>
+                <div id="cod">
+                    <h4>Cash On Delivery </h4>
+                    <div id="childCOD">
+                        <div id="cod1">
+                            <input type="radio" >
+                            <p>Cash On Delivery</p>
+                        </div>
+                        <button id="place">Place Order & Pay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </body>
+      </html> 
+</body>
+</html>
+
+<script src="payment.js"></script>

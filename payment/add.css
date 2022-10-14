@@ -1,0 +1,433 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    margin: auto;
+}
+#delivery{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    border: 2px solid rgb(206, 199, 199);
+    
+}
+#delivery>h3{
+    margin: 1.5%;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    
+}
+h2{
+    color:gray;
+}
+#f-name{
+    width: 23%;
+}
+#f-name input{
+    width: 100%;
+}
+#l-name{
+    width: 23%;
+}
+#l-name input{
+    width:100%
+}
+#c-number{
+    width: 47%;
+}
+#c-number input{
+    width: 100%;
+}
+#house{
+    width: 30%;
+}
+#apartment{
+    width:90%;
+}
+#str-det{
+    width: 50%;
+}
+#landmark{
+    width: 50%;
+}
+#delivery > div {
+    padding: 1%;
+  }
+#delivery input {
+    height: 25px;
+    border: none;
+}
+#str-det input{
+    height:16px;
+}
+#landmark{
+    width: 50%;
+    margin-right: -10px;
+}
+#landmark input{
+    width: 95%;
+}
+#delivery {
+    background-color: #f5f5f5;
+    margin: 1.5%;
+}
+#details{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    width:100%;
+}
+#address {
+    display: flex;
+
+    /*  justify-content: space-around; */
+    padding: 5px;
+    gap: 2%;
+    width:100%
+}
+#street{
+    display: flex;
+    padding: 5px;
+    gap: 2%;
+    width:100%;
+}
+#city{
+    display: flex;
+    padding: 5px;
+    gap: 2%;
+    width:100%;
+}
+#city-name input{
+    height:16px;
+}
+
+  label {
+    color: #979797;
+    margin-bottom: 10px;
+  }
+  button{
+    
+    /* background-color: yellowgreen; */
+    border:1px solid black;
+    /* height: 25px; */
+    cursor: pointer;
+    /* padding: 6px; */
+    
+  }
+  #nickname > button:hover{
+    border: 1px solid green;
+    /* color:green; */
+    
+}
+#nickname > button{
+    padding: 9px;
+    /* color:white; */
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 5px; 
+    /* text-align: center; */
+    align-items: center;
+}
+  /* ------voucher----- */
+  #voucher{
+    /* box-sizing: border-box;*/
+    padding: 10px; 
+    width: 30%;
+    margin: auto;
+    margin-top: 20px; 
+
+    /* border: 1px solid black; */
+    
+
+  }
+  #vou-num{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: #f5f5f5
+  }
+  #vou-num > input{
+    height: 30px;
+    text-align: center;
+    border: none;
+  }
+  #vou-num >button{
+    height: 35px;
+    padding: 0 20px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    color: #4A4A4A;
+    cursor: pointer;
+  }
+  #summary{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    background-color: #f5f5f5
+
+  }
+
+  #gift{
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid rgb(206, 199, 199);
+    width: 60%;
+    margin-left: 6.5%;
+    background-color: #f5f5f5;
+
+    
+}
+  
+  #gift_name{
+    display: flex;
+    padding: 5px;
+    gap: 2%;
+    width:100%;
+  }
+  body {
+    margin: 0px;
+  }
+  #gift input{
+    border: none;
+    height: 20px;
+    width:  70%;
+  }
+  #rec-name input{
+    width:100%
+  }
+  #your-name input{
+    width: 100%;
+  }
+  #head {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgb(228, 225, 225);
+  }
+  #head > div {
+    width: 75%;
+    height: 65%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #number {
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #979797;
+    margin-top: 50px;
+  }
+  #main_box {
+    display: flex;
+    border: 1px solid rgb(206, 199, 199);
+    height: 500px;
+    width: 60%;
+    margin-left: 6.5%;
+    margin-top:20px;
+  }
+  #left {
+    border: 1px solid rgb(204, 200, 200);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+   #right {
+   
+    flex: 3; 
+     background-color: whitesmoke;  
+   }
+  #left > div {
+    border-bottom: 1px solid rgb(148, 145, 145);
+  
+    padding: 27px;
+    font-family: sans-serif;
+    color: #222222;
+  }
+  #left > div:nth-child(1) {
+    color: black;
+    font-weight: 700;
+    /* background-color: whitesmoke; */
+  }
+  #left > div:nth-child(6) {
+    border: none;
+  }
+  
+  input[type="radio"] {
+    border: 0px;
+    height: 2em;
+    width: 20px;
+  }
+  input[type="textarea"] {
+    border: 0px;
+    height: 42px;
+    width: 20px;
+  }
+  #credit{
+      /* display: flex; */
+      /* border:1px solid blue; */
+      height:400px;
+      /* flex: 4;*/
+      background-color: whitesmoke;
+      margin-left: 30px; 
+   
+  }
+  #submit_add > button{
+    padding: 9px;
+    text-align: center; 
+    align-items: center;
+    margin: 5px;
+    background-color: #666666;
+    border:none;
+    color: #FFFFFF;
+  }
+  #sub{
+   
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  #submit_msg > button{
+    padding: 9px;
+    text-align: center; 
+    align-items: center;
+    margin: 5px;
+    background-color: #666666;
+    border:none;
+    color: #FFFFFF;
+  }
+  #credit>div:nth-child(1){
+      flex:1;
+  }
+  #credit>div:nth-child(2){
+      flex:12;
+  }
+  #radio{
+    margin-left:30px;
+    margin-top:15px;
+}
+#payment_details>p{
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-top:20px;
+}
+.first_line{
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    
+}
+#card_details{
+    margin-top:40px;
+    color:gray;
+    font-family: sans-serif;
+    font-size:10px;
+}
+
+#card_no{
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: whitesmoke;
+    margin-top:10px;
+    margin-bottom: 30px;  
+   
+}
+#sec_line{
+    display: flex;
+    gap:20px;
+}
+#valid{
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: whitesmoke;
+    margin-top:10px;
+    margin-bottom: 30px; 
+
+}
+#cvv,#upiid{
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: whitesmoke;
+    margin-top:10px;
+    margin-bottom: 30px; 
+
+}
+#save{
+    display: flex;
+    gap:5px;
+    margin-bottom: 30px;
+}
+#checkbox{
+    margin-top:-30px; 
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+}
+#pay,#verify,#place{
+    width:30%;
+    height: 50px;
+    background-color: yellowgreen;
+    border:none;
+    color:white;
+}
+#summ-child > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+#deli-charge > p:last-child{
+    color:green
+}
+#add_credit{
+    display: flex;
+    align-items: center;
+}
+#add_credit input{
+  margin-top: 6px;
+  margin-left: -10px;
+}
+#up1{
+    display: flex;
+    align-items: center;
+}
+#cod1{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+} 
+h4{
+    color:#4A4A4A;
+}
+#add_upi{
+    margin-left: 30px;
+}
+#cod{
+    margin-left: 30px;
+}
+#upi{
+    text-align: center;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 700;
+    /* background-color: whitesmoke; */
+}
+#cash{
+    text-align: center;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 700;
+    /* background-color: whitesmoke; */
+}
