@@ -1,0 +1,304 @@
+@media screen and (min-width:800px) and (max-width: 1100px){
+    #navbar input{
+        width: 20rem;
+        height: 27px;
+        border: 1px solid gray;
+        border-right: none;
+        text-indent: 10px;
+    }
+
+    .logo{
+        width: 90%;
+    }
+    #navbar > div:first-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:421px) and (max-width: 800px){
+#container{
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVBAR */
+#navbar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#navbar > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 90%;
+}
+
+#navbar input{
+    width: 20rem;
+    height: 27px;
+    border: 1px solid gray;
+    border-right: none;
+    text-indent: 10px;
+}
+
+/* CHECKOUT BOX */
+
+#checkoutBoxDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #checkoutBoxDiv > div:first-child{
+    width: 50%;
+  }
+  
+  #checkoutBoxDiv > div:nth-child(2){
+    width: 50%;
+  }
+  
+  .checkoutBox{
+    width: 100%;
+  }
+
+  /* PRODUCTS */
+
+  .productsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .productsDiv> div:first-child{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .productsDiv> div:first-child > div{
+    width: 100%;
+    padding: 16px 0;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.182);
+    font-size: 18px;
+  }
+  
+  
+  /* PRODUCT BOX  */
+  
+  .productBox{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .box{
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+  
+  .box > img{
+    width: 80%;
+  }
+
+  /* FOOTER  */
+
+footer{
+    padding: 20px 10px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  footer > div:first-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footerBox h4{
+    font-size: 25px;
+  }
+  
+  .footerBox p{
+    font-size: 20px;
+  }
+
+  /* FOOTER BOTTOM  */
+
+#footerBottom{
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width:0px) and (max-width: 420px){
+  #container{
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVBAR */
+#navbar{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+#navbar > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar > div > div:first-child{
+  display: none;
+}
+
+.logo{
+    width: 130%;
+}
+
+#navbar input{
+    width: 10rem;
+    height: 27px;
+    border: 1px solid gray;
+    border-right: none;
+    margin-left: 10px;
+    /* text-indent: 10px; */
+}
+
+.basketBox{
+  padding: 10px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.navBottom{
+  display: none;
+}
+
+/* CHECKOUT BOX */
+
+#checkoutBoxDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  #checkoutBoxDiv > div:first-child{
+    width: 50%;
+  }
+  
+  #checkoutBoxDiv > div:nth-child(2){
+    width: 50%;
+  }
+  
+  .checkoutBox{
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .checkoutBtnDiv > button{
+    width: 45%;
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  /* TABLE  */
+
+  tr{
+    font-size: 10px;
+  }
+
+  th,
+td {
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+.decriptionTh {
+  width: 20%;
+}
+
+  /* PRODUCTS */
+
+  .productsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .productsDiv> div:first-child{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .productsDiv> div:first-child > div{
+    width: 100%;
+    padding: 16px 0;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.182);
+    font-size: 18px;
+  }
+  
+  
+  /* PRODUCT BOX  */
+  
+  .productBox{
+    width: 90%;
+    margin: auto;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+  
+  .box{
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+  
+  .box > img{
+    width: 80%;
+  }
+
+  /* FOOTER  */
+
+footer{
+    padding: 20px 10px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  footer > div:first-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footerBox h4{
+    font-size: 25px;
+  }
+  
+  .footerBox p{
+    font-size: 20px;
+  }
+
+  /* FOOTER BOTTOM  */
+
+#footerBottom{
+    display: none;
+  }
+
+}
