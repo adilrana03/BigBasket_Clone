@@ -114,5 +114,5 @@ var btn = document.querySelector("#checkBtn");
 btn.addEventListener("click", payment);
 
 function payment(){
-    window.location.href="../payment/payment.html"
+    window.location.href="../payment/add.html"
 }
