@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="icon" href="https://www.bbassets.com/static/v2514/images/favicon.ico?v=2514" type="image/x-icon">
+   <style>
+       button{
+           background-color: yellowgreen;
+        border: none;
+        padding: 3px;
+
+       }
+       div{
+          display:flex;
+          justify-content: center;
+       }
+       
+   </style>
+</head>
+<body>
+    <img src="https://www.bigbasket.com/static/v2489/common/img/bb_logo.png">
+    <div>
+        <input type="password" placeholder="Enter OTP"><button onclick="otp()">submit</button>
+    </div>
+  
+</body>
+</html>
+<script>
+    function otp(){
+    var enter = document.querySelector("input").value
+    if(enter == 1234)
+    {
+             window.location.href="sucessful.html"
+    }
+    else{
+        alert("invalid otp")
+    }
+    }
+</script>
