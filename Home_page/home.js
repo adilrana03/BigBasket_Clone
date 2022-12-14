@@ -18,6 +18,7 @@ function print(flag) {
     flag++;
   }, 3000);
 }
+
 var flag = 0;
 print2(flag);
 function print2(flag) {
@@ -48,39 +49,41 @@ userName.innerText = name;
 var object1={
   name:"Onion",
   price:38.38,
-  strike:58,
+  strike_price:58,
   qty:1,
 }
 var object2={
   name:"farm eggs",
   price:199.50,
-  strike:220,
+  strike_price:220,
   qty:1,
 }
 var object3={
   name:"Atta",
   price:56.05,
-  strike:70,
+  strike_price:70,
   qty:1,
 }
 var object4={
   name:"Idli Dosa",
   price:66.50,
-  strike:80,
+  strike_price:80,
   qty:1,
 }
 var object5={
   name:"Harpic",
   price:185,
-  strike:200,
+  strike_price:200,
   qty:1,
 }
+
+
 var a1= document.getElementById("a1");
 a1.addEventListener("click", function(){
   var data=JSON.parse(localStorage.getItem("bigbasket")) || [];
   data.push(object1);
-  localStorage.setItem("bigbasket", JSON.stringify(data));
-  alert("Product Added in Basket");
+  localStorage.setItem("products", JSON.stringify(data));
+  alert(name, "Product Added in Basket");
   cart_count();
 });
 
@@ -89,7 +92,7 @@ var a2= document.getElementById("a2");
 a2.addEventListener("click", function(){
   var data=JSON.parse(localStorage.getItem("bigbasket")) || [];
   data.push(object2);
-  localStorage.setItem("bigbasket", JSON.stringify(data));
+  localStorage.setItem("products", JSON.stringify(data));
   alert("Product Added in Basket");
   cart_count();
 });
@@ -98,7 +101,7 @@ var a3= document.getElementById("a3");
 a3.addEventListener("click", function(){
   var data=JSON.parse(localStorage.getItem("bigbasket")) || [];
   data.push(object3);
-  localStorage.setItem("bigbasket", JSON.stringify(data));
+  localStorage.setItem("products", JSON.stringify(data));
   alert("Product Added in Basket");
   cart_count();
 });
@@ -107,7 +110,7 @@ var a4= document.getElementById("a4");
 a4.addEventListener("click", function(){
   var data=JSON.parse(localStorage.getItem("bigbasket")) || [];
   data.push(object4);
-  localStorage.setItem("bigbasket", JSON.stringify(data));
+  localStorage.setItem("products", JSON.stringify(data));
   alert("Product Added in Basket");
   cart_count();
 });
@@ -116,7 +119,7 @@ var a5= document.getElementById("a5");
 a5.addEventListener("click", function(){
   var data=JSON.parse(localStorage.getItem("bigbasket")) || [];
   data.push(object5);
-  localStorage.setItem("bigbasket", JSON.stringify(data));
+  localStorage.setItem("products", JSON.stringify(data));
   alert("Product Added in Basket");
   cart_count();
 });
@@ -124,11 +127,11 @@ a5.addEventListener("click", function(){
 cart_count();
 function cart_count(){
   var count= document.getElementById("cart_ele");
-  var totalcount=JSON.parse(localStorage.getItem("bigbasket"));
+  var totalcount=JSON.parse(localStorage.getItem("products"));
   if(totalcount!=null){
     count.innerText=totalcount.length;
     console.log(totalcount.length);
   }else{
     count.innerText=0;
   }
-}
+};

@@ -243,12 +243,12 @@ image.setAttribute("id","imgid")
 // var offdiv=document.createElement("div")
 // offdiv.innerText=elem.off;
 //offdiv.setAttribute("id","offdiv")
-var idiv=document.createElement("div")
+var idiv=document.createElement("div")    
 
 var namediv=document.createElement("div")
 namediv.setAttribute("id","namediv")
 
-var name=document.createElement("h7");
+var name=document.createElement("h6");
 name.style.fontSize="20px"
 namediv.append(name)
 var fresh=document.createElement("div")
@@ -263,13 +263,14 @@ veg.setAttribute("id","logo")
 
 var price=document.createElement("h7");
 var price2=document.createElement("h7");
-price2.textContent=elem.mrp2;
+price2.textContent=elem.mrp;
 price2.setAttribute("id","price2")
 price.textContent=`Rs ${elem.mrp}`;
 price.style.fontSize="18px"
 
 var truck=document.createElement("img")
 truck.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhzs53TfNnjTRqFDU7kRfOsoh3LE14bJe5Qg&usqp=CAU"
+truck.alt="truck";
 var mdiv=document.createElement("div")
 mdiv.setAttribute("id","mdiv")
 var divOne=document.createElement("div")
@@ -297,15 +298,11 @@ btn.setAttribute("id","cartbtn");
 var count=2;
 // adding click event to add items in the cart
 btn.addEventListener("click",function(){
-   
-    
     qtybox.textContent=count++;
     elem.qty=1;
     
     addtocart(elem.name,elem.mrp,elem.qty,elem.strike);
      alert(`${elem.name} is added successfully`)
-   
-
   })
 
 
@@ -330,6 +327,7 @@ mainDiv.append(idiv,veg,fresh,namediv,coldiv);
 prd.append(mainDiv);
 });
 }
+
 // add to cart function 
 function addtocart(name,price,qty,strike){
     // creating local storage
@@ -355,7 +353,6 @@ let cartdata= JSON.parse(localStorage.getItem("bigbasket"))
 // adding sort functionality 
 
 var sort=document.getElementById("sortPrice");
-
 sort.addEventListener("change",function priceSort(){
 
 var sel=document.querySelector("#sortPrice").value;
@@ -378,7 +375,7 @@ if(sel=="nasc"){
 })
 }
 if(sel=="ndsc"){
-    bakery.sort(function(a,b){
+    bakery.sort(function(a1,b2){
  if(a.name>b.name){
      return -1;
  }

@@ -90,11 +90,8 @@
             <input  type="email" id="email" required placeholder="Enter e-mail"/></br>
             <label for="">Password</label></br>
             <input type="password" id="myInput" required placeholder="Enter password"></br>
-            
-
-
             <i class="fa-solid fa-eye eyes" onclick="myFunction()"></i>
-            <p>By signing up,I accept the TCP-bigbasket’s <a href="https://www.bigbasket.com/terms-and-conditions/">Terms and Conditions</a>  and <a href="https://www.bigbasket.com/privacy-policy/"> Privacy Policy</a></p>
+            <p>By signing up,I accept the TC </p>
             <input type="submit" value="Sign Up">
         </form>
         <p>Already have an account? <a href="login.html">Sign In</a> </p>
@@ -103,21 +100,21 @@
 </html>
 <script>
     function myFunction() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
+  var pass = document.getElementById("myInput");
+  if (pass.type === "password") {
+    pass.type = "text";
   } else {
-    x.type = "password";
+    pass.type = "password";
   }
 }
-var arr=JSON.parse(localStorage.getItem("signup"))||[];
+var arr=JSON.parse(localStorage.getItem("signup")) || [];
 document.querySelector("form").addEventListener("submit",signupfun);
 function signupfun(){
     event.preventDefault();
     var name=document.getElementById("name").value;
     var email=document.getElementById("email").value;
     var password=document.getElementById("myInput").value;
-    var obj={}
+    var obj={ }
     obj.name=name;
     obj.email=email;
     obj.password=password;
@@ -126,7 +123,5 @@ function signupfun(){
     alert("Signed up successfully")
     localStorage.setItem("signup",JSON.stringify(arr));
     window.location.href="login.html"
-
-
 }
 </script>

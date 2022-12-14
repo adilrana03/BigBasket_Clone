@@ -1,9 +1,4 @@
-var userName = document.getElementById("userName");
-var name = localStorage.getItem("user") || "USER";
-userName.innerText = name;
-
 var tBody = document.querySelector("tbody");
-
 var products = JSON.parse(localStorage.getItem("bigbasket")) || [];
 
 display(products);
@@ -19,42 +14,40 @@ function display(data){
         var tr = document.createElement("tr");
 
         var tdItem = document.createElement("td");
-         tdItem.innerText = elem.name;
+        tdItem.innerText = elem.name;
         var tdPrice = document.createElement("td");
-         tdPrice.setAttribute("class", "price");
-         var p1 = document.createElement("p");
-         p1.innerText = elem.price;
-         var p2 = document.createElement("p");
-         p2.innerText = elem.strike;
+        tdPrice.setAttribute("class", "price");
+        var p1 = document.createElement("p");
+        p1.innerText = elem.price;
+        var p2 = document.createElement("p");
+        p2.innerText = elem.strike_price;
         tdPrice.append(p1, p2);
 
         var tdQty = document.createElement("td");
-         var div = document.createElement("div");
-         div.setAttribute("class", "qtyBtn");
-         var dec = document.createElement("button");
-         dec.setAttribute("class", "btn1");
-         dec.innerText = "-";
-         dec.addEventListener("click", sub);
-         function sub(){
+        var div = document.createElement("div");
+        div.setAttribute("class", "qtyBtn");
+        var dec = document.createElement("button");
+        dec.setAttribute("class", "btn1");
+        dec.innerText = "-";
+        dec.addEventListener("click", sub);
+        function sub(){
             var val = +disP.innerText;
             if(val != 1){
-                disP.innerText = val-1;
+                disP.innerText = val-100;
             }
             elem.qty = disP.innerText;
             display(data);
-         }
-
-         var disP = document.createElement("p");
-         disP.setAttribute("class", "qtyP");
-         disP.innerText = elem.qty;
-
-         var inc = document.createElement("button");
-         inc.setAttribute("class", "btn2");
-         inc.innerText = "+";
-         inc.addEventListener("click", add);
-         function add(){
+        }
+        var disP = document.createElement("p");
+        disP.setAttribute("class", "qtyP");
+        disP.innerText = elem.qty;
+        var inc = document.createElement("button");
+        inc.setAttribute("class", "btn2");
+        inc.innerText = "+";
+        inc.addEventListener("click", add);
+        function add(){
             var val = +disP.innerText;
-            disP.innerText = val+1;
+            disP.innerText = val+100;
             elem.qty = disP.innerText;
             display(data);
          }
@@ -64,14 +57,14 @@ function display(data){
         tdQty.append(div);
 
         var tdTot = document.createElement("td");
-         tdTot.innerText = ((+elem.price) * (+elem.qty)).toFixed(2);
+         tdTot.innerText = ((+elem.price) * (+elem.qty).toFixed());
          totalPrice += (+tdTot.innerText);
         var tdDel = document.createElement("td");
          tdDel.setAttribute("class", "delete");
          tdDel.innerHTML = "<i class='fa-sharp fa-solid fa-xmark'></i>";
          tdDel.addEventListener("click", ()=> {
             data.splice(i, 1);
-            localStorage.setItem("bigbasket", JSON.stringify(data));
+            localStorage.setItem("products", JSON.stringify(data));
             display(data);
          });
 
@@ -106,7 +99,7 @@ function display(data){
 var clearBasket = document.getElementById("clearBasket");
 clearBasket.addEventListener("click", rem);
 function rem(){
-  localStorage.removeItem("bigbasket");
+  localStorage.removeItem("products");
   display([]);
 }
 
