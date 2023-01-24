@@ -2,9 +2,6 @@
 
 A web application to buy groceries online.
 
-## Run Project : http://bigbasket-clone-v2.vercel.app/
-
-
 ## Team Members
 
  - Adil Rana
